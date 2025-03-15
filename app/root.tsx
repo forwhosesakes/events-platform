@@ -1,15 +1,14 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
 import {
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
 
-import "./tailwind.css";
+} from "react-router";
 
-export const links: LinksFunction = () => [
+
+export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",

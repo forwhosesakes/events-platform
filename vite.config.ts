@@ -1,28 +1,50 @@
-import {
-  vitePlugin as remix,
-  cloudflareDevProxyVitePlugin as remixCloudflareDevProxy,
-} from "@remix-run/dev";
+import { reactRouter } from "@react-router/dev/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-
-declare module "@remix-run/cloudflare" {
-  interface Future {
-    v3_singleFetch: true;
-  }
-}
+import { cloudflareDevProxy } from "@react-router/dev/vite/cloudflare"
+import svgr from "vite-plugin-svgr";
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    remixCloudflareDevProxy(),
-    remix({
-      future: {
-        v3_fetcherPersist: true,
-        v3_relativeSplatPath: true,
-        v3_throwAbortReason: true,
-        v3_singleFetch: true,
-        v3_lazyRouteDiscovery: true,
+    cloudflareDevProxy({
+      getLoadContext({ context }) {
+        return { cloudflare: context.cloudflare };
       },
     }),
+    
+
+    reactRouter(),
+    svgr(),
     tsconfigPaths(),
+    tailwindcss(),
   ],
+  optimizeDeps: {
+    include: [
+  
+    ],
+    // exclude: ["@remix-run/dev"],
+  },
+  build: {
+    rollupOptions: {
+      // external: [/node:.*/, '@remix-run/dev', '@remix-run/server-runtime'],
+      output: {
+        manualChunks: {
+  
+          // 'email': ['@react-email/components','@react-email/render'],
+        },
+      },
+    },
+    sourcemap: true,
+    target: 'esnext',
+    minify: 'esbuild',
+  },
+  server: {
+    fs: {
+      allow: ['..'],
+    },
+  },
+  ssr: {
+    noExternal: ['lucide-react', 'react-dropzone'],
+},
 });
