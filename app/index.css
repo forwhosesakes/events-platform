@@ -2,8 +2,17 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Satoshi", "sans-serif";
+  --font-sans: PingARLT, sans-serif;
+  --font-serif: PingARLT;
+  --font-display: "PingARLT","Satoshi", "sans-serif";
+  --font-primary: "PingARLT","Satoshi", "sans-serif";
+
+
   --breakpoint-3xl: 120rem;
+  --color-primary:#233A77;
+  --color-secondary:#1C81AC;
+  --color-tertiary:#3EB985;
+
   --color-avocado-100: oklch(0.99 0 0);
   --color-avocado-200: oklch(0.98 0.04 113.22);
   --color-avocado-300: oklch(0.94 0.11 115.03);
@@ -13,5 +22,28 @@
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
 
+}
+@font-face {
+  font-family: "PingARLT";
+  src: url("/app/assets/fonts/PingARLT-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PingARLT";
+  src: url("/app/assets/fonts/PingARLT-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PingARLT";
+  src: url("/app/assets/fonts/PingARLT-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 

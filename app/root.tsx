@@ -6,6 +6,8 @@ import {
   ScrollRestoration,
 
 } from "react-router";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 
 export const links = () => [
@@ -23,8 +25,10 @@ export const links = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html dir="rtl" lang="ar">
+
       <head>
+      <title>  نسق | تسجيل الجمعيات الشبابية</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
@@ -40,5 +44,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return   <>
+   <Navbar/>
+  <Outlet />
+    <Footer  />
+</>;
 }
