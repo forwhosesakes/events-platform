@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex justify-between ">
           <div>
             <img src={FooterLogo} alt="logo" />
-            <p className="font-normal text-base lg:text-[16px]  text-tertiary  md:w-3/5 mt-4 md:mt-12">
+            <p className="font-normal text-xs lg:text-[16px]  text-tertiary  md:w-3/5 mt-4 md:mt-12">
               {GLOSSARY.FOOTER.OVERVIEW}
             </p>
           </div>

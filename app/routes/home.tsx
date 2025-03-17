@@ -15,7 +15,7 @@ const Home = () => {
       
       <div className="w-full relative">
         <img 
-          className="absolute right-0 top-28 h-72 z-10 pointer-events-none" 
+          className="absolute hidden md:block right-0 top-28 h-72 z-10 pointer-events-none" 
           alt="form-pattern" 
           src={FormPath}
         />
@@ -27,9 +27,9 @@ const Home = () => {
   allow="geolocation; microphone; camera" 
   src="https://fce9cqxp.forms.app/form/67d684423aaa500002ce21cb" 
   frameBorder="0" 
+className="h-[1200px] md:h-[1000px]"
   style={{ 
     width: "100%",
-    height: "1000px", 
     border: "none"
   }}
 />
