@@ -19,8 +19,11 @@ const Hero = () => {
       <TitleBlock className="text-2xl md:text-4xl font-bold mb-4" text={GLOSSARY.HERO.TITLE_REG} />
       <ul className="">
       {GLOSSARY.HERO.CONDITIONS.map((conditiion,i) => (
-        <li  key ={i} className="flex gap-2 md:max-w-3/5">
+        <li  key ={i} className="flex gap-2 items-start">
+          <div className="w-12" >
           <CheckIcon />
+
+          </div>
           <p>{conditiion}</p>
         </li>
       ))}
