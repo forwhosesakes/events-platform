@@ -27,7 +27,7 @@ const Home = () => {
   allow="geolocation; microphone; camera" 
   src="https://fce9cqxp.forms.app/form/67d684423aaa500002ce21cb" 
   frameBorder="0" 
-className="h-[1200px] md:h-[1000px]"
+className="h-[2000px] md:h-[1800px]"
   style={{ 
     width: "100%",
     border: "none"
