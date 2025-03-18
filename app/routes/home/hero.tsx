@@ -6,7 +6,7 @@ import HeroPath from "~/assets/images/hero-path.svg"
 const Hero = () => {
   return (
     <section
-      className="min-h-96  px-12 py-32 md:px-28 md:py-28  text-white relative"
+      className="min-h-80  px-12 py-28 md:px-28 md:py-18  text-white relative"
       style={{
         background:
           "linear-gradient(96deg, #3EB985 -5.92%, #1C81AC 34%, #233A77 82.8%)",
