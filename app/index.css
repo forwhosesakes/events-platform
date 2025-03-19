@@ -47,3 +47,8 @@
   font-display: swap;
 }
 
+
+html,body,div,iframe{height:100%;}
+div{position:relative;overflow:hidden;}
+iframe{border:none;width:100%;}
+body{margin:0;padding:0;}
