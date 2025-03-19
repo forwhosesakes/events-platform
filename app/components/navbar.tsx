@@ -18,33 +18,33 @@ export type NavElement = {
 
 export const NavbarElements: NavElement[] = [
   { 
-    id: "about",
-    arabicLabel: GLOSSARY.HEADER.NAVBAR.ABOUT, 
+    id: "main",
+    arabicLabel: GLOSSARY.HEADER.NAVBAR.MAIN, 
     link: "/",
     visibility: true,
     onClick() {},
   },
   {
     id: "registeration",
-    arabicLabel: GLOSSARY.HEADER.NAVBAR.CONDITIONS, 
-    link: "/",
+    arabicLabel: GLOSSARY.HEADER.NAVBAR.REGISTER, 
+    link: "/form",
     visibility: true,
     onClick() {},
   },
-  {
-    id: "levels",
-    arabicLabel: GLOSSARY.HEADER.NAVBAR.LEVELS, 
-    link: "/",
-    visibility: true,
-    onClick() {},
-  },
-  {
-    id: "contact-us",
-    arabicLabel: GLOSSARY.HEADER.NAVBAR.CONTACT_US, 
-    link: "/",
-    visibility: true,
-    onClick() {},
-  },
+  // {
+  //   id: "levels",
+  //   arabicLabel: GLOSSARY.HEADER.NAVBAR.LEVELS, 
+  //   link: "/",
+  //   visibility: true,
+  //   onClick() {},
+  // },
+  // {
+  //   id: "contact-us",
+  //   arabicLabel: GLOSSARY.HEADER.NAVBAR.CONTACT_US, 
+  //   link: "/",
+  //   visibility: true,
+  //   onClick() {},
+  // },
 ];
 
 const Navbar = () => {
@@ -107,7 +107,7 @@ const Navbar = () => {
 
 
 
-      <Button variant={"secondary"} className="text-white">{GLOSSARY.HEADER.JOIN_BUTTON}</Button>
+      <Button onClick={()=>navigate("form")} variant={"secondary"} className="text-white">{GLOSSARY.HEADER.JOIN_BUTTON}</Button>
       
       {navigation.state === "loading" && <LoadingOverlay message="جاري التحميل"/>}
     </nav>

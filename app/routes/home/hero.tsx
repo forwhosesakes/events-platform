@@ -39,6 +39,7 @@ const Hero = () => {
     frameBorder="0" 
     style={{ 
       width: "100%",
+      height:"100vh",
       border: "none"
     }}
     sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
