@@ -51,7 +51,9 @@ export default function App() {
     frameBorder="0" 
     style={{ 
       width: "100%",
+      maxHeight:"100vh",
       height:"100vh",
+
       border: "none"
     }}
     sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
