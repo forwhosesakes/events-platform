@@ -44,26 +44,27 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <div style={{ 
-      overflow: "hidden", 
-      width: "100%", 
-      height: "100vh",
-      margin: 0,
-      padding: 0
-    }}>
-      <iframe
-        src="https://test.jataa-consultation.org/test-nasaq/"
-        title="Controlled Form Embed"
-        className="w-full h-full"
-        frameBorder="0"
-        style={{
-          width: "100%",
-          height: "100%",
-          border: "none"
-        }}
-        sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-      />
-    </div>
-  );
+  return   <>
+    <iframe 
+   src="https://test.jataa-consultation.org/test-nasaq/"
+    title="Controlled Form Embed"
+    className="h-[99vh]"
+    frameBorder="0" 
+    style={{ 
+      width: "100%",
+      maxHeight:"100vh",
+      height:"100vh",
+      marginBottom:"-5px",
+
+      border: "none"
+    }}
+    sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+  />
+
+</>;
 }
+// export default function App() {
+//   return ( <table className={"h-[]"} border={0} cellSpacing={0} cellPadding={0} id="hold_my_iframe">
+//     <iframe   src="https://test.jataa-consultation.org/test-nasaq/" width={"100%"} height={"100%"} ></iframe>
+// </table>
+//   );}
