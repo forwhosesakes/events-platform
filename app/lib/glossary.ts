@@ -3,6 +3,8 @@ export const GLOSSARY ={
     NAVBAR:{
       ABOUT:"عن نسق",
       CONDITIONS:"شروط التسجيل",
+      REGISTER:"التسجيل",
+      MAIN:"الرئيسية",
       LEVELS:"مستويات البرنامج",
       CONTACT_US:"تواصل معنا"
     },

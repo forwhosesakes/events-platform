@@ -45,8 +45,19 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return   <>
-   {/* <Navbar/> */}
-  <Outlet />
-    <Footer  />
+    <iframe 
+   src="https://test.jataa-consultation.org/test-nasaq/"
+    title="Controlled Form Embed"
+    frameBorder="0" 
+    style={{ 
+      width: "100%",
+      maxHeight:"100vh",
+      height:"100vh",
+
+      border: "none"
+    }}
+    sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+  />
+
 </>;
 }
