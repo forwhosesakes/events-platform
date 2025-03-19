@@ -44,24 +44,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return   <>
+  return   <div>
     <iframe 
    src="https://test.jataa-consultation.org/test-nasaq/"
     title="Controlled Form Embed"
     className="h-[99vh]"
     frameBorder="0" 
-    style={{ 
-      width: "100%",
-      maxHeight:"100vh",
-      height:"100vh",
-      marginBottom:"-5px",
-
-      border: "none"
-    }}
+ 
     sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
   />
 
-</>;
+</div>;
 }
 // export default function App() {
 //   return ( <table className={"h-[]"} border={0} cellSpacing={0} cellPadding={0} id="hold_my_iframe">
